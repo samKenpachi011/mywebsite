@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #444;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+}
+
+body#bg-img {
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body#bg-img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(68, 68, 68, 0.9);
+}
+
+main {
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+}
+
+main .icons {
+    margin-top: .3rem;
+}
+
+main .icons a {
+    padding: 0.4rem;
+    color: #fff;
+}
+
+main .icons a:hover {
+    color: #eece1a;
+    transition: all 0.5s ease-out;
+}
+
+main#home {
+    overflow: hidden;
+    z-index: -1;
+    background: rgba(68, 68, 68, 0.9);
+}
+
+main#home h1 {
+    margin-top: 3vh;
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2b2b2b;
+    color: #fff;
+    height: 60px;
+}
+
+
+/* attribute styles */
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
+    font-size: 6rem;
+}
+
+h1.lg-heading_3 {
+    font-size: 3rem;
+}
+
+h1.lg-heading_4 {
+    font-size: 4rem;
+}
+
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5);
+}
+
+h2.sm-heading2 {
+    width: fit-content;
+    color: #000;
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+    font-weight: 700;
+    background: rgb(250, 229, 38);
+    border-radius: 5px;
+}
+
+a {
+    color: rgb(28, 223, 21);
+    text-decoration: none;
+}
+
+.text-secondary {
+    color: #eece1a;
+}
+
+.about-section-heading {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.15rem;
+    color: #eece1a;
+    font-weight: 700;
+}
+
+.about-section-heading:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    background: #eece1a;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-2 {
+    margin-bottom: .5rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.pdr-3rem {
+    padding-right: 3rem !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.text-muted {
+    color: #c2c2c2 !important;
+}
+
+.text-md-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.about-contact {
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+}
+
+.about-contact-link {
+    color: #fff;
+}
+
+.about-titles {
+    font-size: 1rem;
+}
+
+
+/* About Section */
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio';
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1a 3px solid;
+}
+
+.about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+/* grid 2 */
+
+.about-info2 {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'job1 job2';
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-info2 .job-1 {
+    grid-area: job1;
+    width: 899px;
+}
+
+.about-info2 .job-2 {
+    grid-area: job2;
+    width: 420px;
+    height: fit-content;
+}
+
+.about-info2 .job {
+    background: #515151;
+    padding: 2.3rem;
+    border-bottom: #eece1a 5px solid;
+}
+
+
+/* media config */
+
+@media screen and (max-width: 768px) {
+    .about-info {
+        grid-template-areas: 'bioimage' 'bio';
+        grid-template-columns: 2fr;
+    }
+    .about-info2 {
+        grid-template-areas: 'job1' 'job2';
+        grid-template-columns: 2fr;
+    }
+    .about-info2 .job-1 {
+        width: fit-content;
+    }
+    .text-md-right {
+        text-align: left !important;
+    }
+}
